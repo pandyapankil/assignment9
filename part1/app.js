@@ -22,7 +22,7 @@ function AppViewModel() {
     self.check = function(data, event) {
         try {
             if (event.which == 13) {
-                if (self.input().trim() != '') {
+                if (self.input().trim() !== '') {
                     var comment = {
                         comment: self.input()
                     };
@@ -35,7 +35,7 @@ function AppViewModel() {
         } catch (e) {}
     };
     self.addComment = function() {
-        if (self.input().trim() != '') {
+        if (self.input().trim() !== '') {
             var comment = {
                 comment: self.input()
             };
