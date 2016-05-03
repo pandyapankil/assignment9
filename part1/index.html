@@ -1,0 +1,31 @@
+
+
+    <link href='style.css' rel='stylesheet' type='text/css'>
+
+  <body>
+    <header>
+      <h1>Comments</h1>
+      <p>A simple app that allows a user to input comments</p>
+    </header>
+
+    <main>
+      <section class='comment-input'>
+        <p>Add Your Comment:</p>
+        <input data-bind="value: input,valueUpdate:'afterkeydown',event:{'keyup': check}" />
+        <button data-bind="click: addComment">+</button>        
+      </section>
+      
+      
+      <section class='comments' data-bind="foreach: comments">          
+        <p data-bind="fadeText: comment"></p>
+      </section>      
+    </main>
+
+    <footer>
+      <p>this work is released into the public domain</p>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="http://knockoutjs.com/downloads/knockout-3.2.0.js"></script>
+    <script src="app.js"></script>
+  </body>
